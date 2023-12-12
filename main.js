@@ -245,7 +245,7 @@ function getLocalStorageData() {
 
     }
 }
-// 页面刷新或者加载是加载数据
+// 页面刷新或者加载时加载数据
 window.onload = getLocalStorageData;
 // 发送数据
 function sendPostData(lis, functionName) {
