@@ -2,7 +2,7 @@
 // @name         浙江中医药大学学评教
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  针对浙江中医药大学学教一体华的学评教的插件，可以省去重复的操作。本插件主要是简化评价操作，对于独自特殊的评价仍然需要手动评价，也不麻烦。
+// @description  针对浙江中医药大学学教一体华的学评教的插件，可以省去重复的操作。本插件主要是简化评价操作，对于特殊的评价仍然需要手动评价，也不麻烦。
 // @author       Lock
 // @match        http://jwmk.zcmu.edu.cn/jwglxt/xspjgl/kcgcpj_cxKcgcpjxxIndex.html*
 // @grant        none
@@ -29,16 +29,13 @@ var urlParams = '';
     var commentList = getCommentList();
     console.log(commentList);
     createUI(commentList);
-
-
-
 })();
 
 // 引用UI
 function includeUI() {
 
     var link = document.createElement('link');
-    link.href = 'https://cdn.staticfile.org/layui/2.9.0/css/layui.min.css'; // 这里替换成你需要加载的layui CSS文件的实际URL
+    link.href = 'https://cdn.staticfile.org/layui/2.9.0/css/layui.min.css';
     link.type = 'text/css';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
@@ -322,5 +319,3 @@ function sendSingleData(s) {
     return isok;
     
 }
-
-
